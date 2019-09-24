@@ -43,14 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputerInfo.cs" />
+    <Compile Include="Cryptography\AesEncryptor.cs" />
+    <Compile Include="Cryptography\RsaEncryptor.cs" />
+    <Compile Include="IO\FileUtils.cs" />
+    <Compile Include="IO\XmlHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\BinarySerializer.cs" />
+    <Compile Include="Serialization\XmlSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Collection\" />
-    <Folder Include="Cryptography\" />
-    <Folder Include="IO\" />
-    <Folder Include="Serialization\" />
+    <Folder Include="DB\" />
     <Folder Include="string\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
