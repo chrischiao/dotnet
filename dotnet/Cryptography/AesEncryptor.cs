@@ -62,9 +62,10 @@ namespace dotnet.Cryptography
 
         public static byte[] PasswordToKey(string password)
         {
-            HashAlgorithm md5 = HashAlgorithm.Create("MD5");
-            byte[] hashData = md5.ComputeHash(Encoding.Unicode.GetBytes(password));
-            return hashData;
+            using (MD5 md5 = MD5.Create())
+            {
+                return md5.ComputeHash(Encoding.Unicode.GetBytes(password));
+            }
         }
     }
 
